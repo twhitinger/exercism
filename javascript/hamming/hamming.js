@@ -6,21 +6,21 @@ class Hamming {
   }
 
   compute(input_1 , input_2){
+
     if (input_1.length !== input_2.length) {
       throw new Error('DNA strands must be of equal length.');
     }
-
-    let diff = 0;
-    for (let i = 0; i < input_1.length; i++) {
-      if (input_1[i] != input_2[i]) {
-        diff += 1;
+    
+    let arr1 = input_1.split('');
+    let arr2 = input_2.split('');
+    return arr1.reduce((acc, current, index) => {
+      if (current !== arr2[index]) {
+        acc += 1;
       }
-    }
-    return diff;
+      return acc;
+    }, 0);
   }
 }
-
-
 
 
 

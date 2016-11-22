@@ -12,7 +12,6 @@ class Anagram {
     let word = input.toLowerCase();
     let acc = Object.create(null);
     for (let letter of word){
-
       if ( acc[letter] ){
         acc[letter]++;
       } else {
@@ -23,7 +22,7 @@ class Anagram {
   }
 
   matches(arr, ...strings) {
-    if(strings){
+    if(strings.length > 0){
       strings.push(arr);
       arr = strings;
     }

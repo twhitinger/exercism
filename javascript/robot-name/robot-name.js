@@ -21,7 +21,7 @@ class Robot {
   }
 
   genLetters() {
-    const chars = "ABCDEFGHIJKLMNOPQURSTUVWXYZ";
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const string_length = 2;
     let randomstring = '';
     for (let i=0; i < string_length; i++) {

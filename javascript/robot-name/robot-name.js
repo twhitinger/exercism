@@ -1,4 +1,5 @@
 'use strict';
+
 const names = {};
 
 class Robot {
@@ -16,7 +17,7 @@ class Robot {
 
   getName() {
     const name = `${this.getRandomChar()}${this.getRandomChar()}${this.getRandomNumber(100, 999)}`;
-    return names[name] === undefined ? name : this.getName();
+    return !names[name] ? name : this.getName();
   }
 
   reset() {
